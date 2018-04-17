@@ -6,19 +6,30 @@
  *
  * @package WP_Bootstrap_Starter
  */
-
+get_header();
 ?>
 <!-- CONTENU ACF -->
 <?php
 	// Contrôler si ACF est actif
 	if ( !function_exists('get_field') ) return;
 ?>
-	
-    
-<h2>Plat <?php the_field('nom'); ?></h2>
-<p><?php the_field('type_de_plat'); ?></p>
-<span><?php the_field('ingredients'); ?></span>
-<p><?php the_field('prix'); ?></p>
-<img src="<?php the_field('photo'); ?>">
+	<section id="primary" class="content-area col-sm-12 col-lg-12">
+	<main id="main" class="site-main row" role="main">
 
+	
+    <?php
+		$query = new WP_Query( array('post_type' => 'plat') );
+		while ( $query->have_posts() ) : $query->the_post(); ?>
+		<div class="col-6 p-2">
+			<div class="card">
+				<div class="">
+					<h2>Plat 
+						<a id = "link_menu" href="<?php the_permalink(); ?>"><?php the_field('nom'); ?></a>
+					</h2>
+					<p><?php the_field('prix'); ?></p>
+				</div>
+			</div>
+		</div>
+		<?php wp_reset_postdata(); ?>
+		<?php endwhile; ?>
 <?php get_footer(); ?>
