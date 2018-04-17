@@ -12,12 +12,13 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+get_header(); 
+?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
-		<main id="main" class="site-main" role="main">
+<section id="primary" class="content-area col-sm-12 col-lg-8">
+	<main id="main" class="site-main" role="main">
 
-			<?php
+		<?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
@@ -28,10 +29,10 @@ get_header(); ?>
                 endif;
 
 			endwhile; // End of the loop.
-			?>
+		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
 get_footer();

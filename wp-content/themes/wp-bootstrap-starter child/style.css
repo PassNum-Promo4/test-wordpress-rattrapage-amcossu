@@ -11,20 +11,25 @@ License URI: LICENSE
 Text Domain: wp-bootstrap-starter
 Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
+
 header#masthead {
     background-color:#3d7799 !important ;
 }
+
 #page-sub-header {
     padding-bottom: 5% !important;
 }
+
 #page-sub-header p {
     padding-top: 2% !important;
     text-align: justify !important;
 }
+
 #link_menu{
     text-decoration: none !important;
     color: black !important;
 }
+
 a.page-scroller {
     margin-top: 10% !important;
     margin-bottom: 10% !important;
