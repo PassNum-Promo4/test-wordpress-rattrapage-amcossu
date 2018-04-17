@@ -21,7 +21,7 @@ header#masthead {
     padding-top: 2% !important;
     text-align: justify !important;
 }
-#link_menu:hover{
+#link_menu{
     text-decoration: none !important;
     color: black !important;
 }
